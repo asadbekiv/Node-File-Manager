@@ -1,0 +1,28 @@
+{
+  "name": "node-file-manager",
+  "version": "1.0.0",
+  "description": "RSS School File Manager Task",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadbekiv/Node-File-Manager.git"
+  },
+  "keywords": [
+    "node.js",
+    "file manager",
+    "rss school"
+  ],
+  "author": "Asad Ibodullayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asadbekiv/Node-File-Manager/issues"
+  },
+  "homepage": "https://github.com/asadbekiv/Node-File-Manager#readme"
+}
