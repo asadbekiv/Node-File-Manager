@@ -11,6 +11,7 @@
 
 Carefully consider Advanced Scope,All of them fully completed
 
-if you face problem,conduct me via Discord or Comment section while checking my solutions.
+if you face problem,conduct me via [Discord](https://discord.com/users/123456789012345678) or Comment section while checking my solutions.
 
 For example : Compress and decompress operations makes problem for you.
+
