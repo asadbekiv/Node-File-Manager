@@ -1,5 +1,6 @@
 import { homedir } from 'node:os';
 import { currentWorkingDir } from '../helpers/pathUtils.js';
+import { printLogs } from '../helpers/catchErrors.js';
 
 function getUserName(args) {
   const usernameArg = args.find((arg) => arg.startsWith('--username='));
@@ -13,7 +14,7 @@ export const initApp = () => {
       throw new invalidUserNameError();
     }
 
-    console.log(`Welcome to the File Manager, ${userName}!`);
+    printLogs(`Welcome to the File Manager, ${userName}!`);
     const homeDir = homedir();
     process.chdir(homeDir);
     currentWorkingDir();

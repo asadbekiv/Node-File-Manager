@@ -13,6 +13,7 @@ import {
 
 export const UserInput = async (userInput, closeReadLine) => {
   const [operationType, ...args] = userInput.trim().split(/\s+/g);
+
   const currentDirectory = cwd();
 
   catchAppErrors(

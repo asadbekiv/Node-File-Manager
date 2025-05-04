@@ -1,4 +1,8 @@
-import { catchAppErrors, printError } from '../helpers/catchErrors.js';
+import {
+  catchAppErrors,
+  printError,
+  printLogs,
+} from '../helpers/catchErrors.js';
 
 import {
   fileRead,
@@ -7,6 +11,7 @@ import {
   fileCopy,
   fileMove,
   fileDelete,
+  directoryCreate,
 } from '../services/basicNavigationOperations.js';
 
 export const basicNavigationOperations = async (
@@ -18,19 +23,22 @@ export const basicNavigationOperations = async (
     if (operationType === 'cat') {
       await fileRead(currentWorkingDir, args);
     } else if (operationType === 'add') {
-      console.log('Executing fileCreate operation');
+      printLogs('Executing fileCreate operation');
       await fileCreate(currentWorkingDir, args);
+    } else if (operationType === 'mkdir') {
+      printLogs('Executing directoryCreate operation');
+      await directoryCreate(currentWorkingDir, args);
     } else if (operationType === 'rn') {
-      console.log('Executing fileRename operation');
+      printLogs('Executing fileRename operation');
       await fileRename(currentWorkingDir, args);
     } else if (operationType === 'cp') {
-      console.log('Executing fileCopy operation');
+      printLogs('Executing fileCopy operation');
       await fileCopy(currentWorkingDir, args);
     } else if (operationType === 'mv') {
-      console.log('Executing fileMove operation');
+      printLogs('Executing fileMove operation');
       await fileMove(currentWorkingDir, args);
     } else if (operationType === 'rm') {
-      console.log('Executing fileDelete operation');
+      printLogs('Executing fileDelete operation');
       await fileDelete(currentWorkingDir, args);
     } else {
       printError('Invalid arguments for Basic Operations!');
