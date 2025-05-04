@@ -3,7 +3,7 @@
 1. [Link to the task.](https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/assignment.md)
 2. Done 2025.05.04 / deadline 2025.05.06
 3. [Cross-Check:Review](https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/score.md).
-4. [My Solutions Link](https://github.com/asadbekiv/Node-File-Manage)
+4. [My Solutions Link](https://github.com/asadbekiv/Node-File-Manager)
 
 > Please use ! `master` branch for cross-checking
 
