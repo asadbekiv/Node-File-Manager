@@ -5,6 +5,7 @@ export const fileSystemFlag = {
   cp: true,
   mv: true,
   rm: true,
+  mkdir: true,
 };
 
 export const navigationFlag = {

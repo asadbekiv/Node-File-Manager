@@ -1,3 +1,5 @@
+import { printLogs } from './catchErrors.js';
+
 export const currentWorkingDir = () => {
-  console.log(`\nYou are currently in ${process.cwd()}`);
+  printLogs(`\nYou are currently in ${process.cwd()}`);
 };
