@@ -20,14 +20,14 @@ const startFileMnager = async () => {
     });
 
     rl.on('close', () => {
-      console.log(`Thank you for using File Manager, ${userName}, goodbye!`);
+      console.log(`\x1b[33mThank you for using File Manager, ${userName}, goodbye!\x1b[0m`);
     });
 
     rl.on('error', () => {
       console.log('Error happened !');
     });
   } catch (error) {
-    console.log('Failed to initialize the app:', error);
+    console.error('Failed to initialize the app:', error);
   }
 };
 

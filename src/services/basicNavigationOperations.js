@@ -1,5 +1,5 @@
 import { createReadStream, createWriteStream } from 'node:fs';
-import { copyFile, rm, rename, writeFile } from 'node:fs/promises';
+import { rm, rename, writeFile, mkdir } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
 import { join, resolve } from 'node:path';
 import { catchAppErrors, printError } from '../helpers/catchErrors.js';
@@ -22,6 +22,19 @@ export const fileCreate = async (currentWorkingDir, createFile) => {
     await writeFile(filePathToCreate, ' ', { flag: 'wx' });
   }),
     'Create file opeation fail!';
+};
+
+export const directoryCreate = async (currentWorkingDir, createDir) => {
+  catchAppErrors(async () => {
+    const [dirName] = createDir;
+
+    if (!dirName) {
+      console.error('Invalid directory name!.Please provide directory name');
+    }
+    const dirPathToCreate = join(currentWorkingDir, dirName);
+    await mkdir(dirPathToCreate);
+  }),
+    'Create directory operation fail !';
 };
 
 export const fileRename = async (currentWorkingDir, fileToRename) => {
